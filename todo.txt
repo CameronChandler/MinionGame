@@ -4,10 +4,12 @@
 # cooldowns for abilities
 # Class system
 # Classes: minion guy, builder
-# Builder can spawn turrets and walls
+# Builder can spawn turrets that can damage other players
 # Minion Guy can spawn minions that damage other players
-
-
+# Main menu
+# Class selection
+# Players can take damage
+# Map with walls as obsticales
 
 
 
@@ -17,9 +19,15 @@ Minions
 - Spawn 
 - Move autonomously
 - Attack
+- Health Bar
 
 Turrets
 - Spawn 
+    - Build Time (have to stand still) (can half build)
+    - Progress Bar
 - Target
 - Shoot
-- Damage
+- Do Damage
+- Take Damage
+- Health Bar
+- Max Turrets (3)
