@@ -1,0 +1,25 @@
+
+# barriers so players can't leave map
+# Player health
+# cooldowns for abilities
+# Class system
+# Classes: minion guy, builder
+# Builder can spawn turrets and walls
+# Minion Guy can spawn minions that damage other players
+
+
+
+
+
+# Implementation Tasks
+
+Minions
+- Spawn 
+- Move autonomously
+- Attack
+
+Turrets
+- Spawn 
+- Target
+- Shoot
+- Damage
