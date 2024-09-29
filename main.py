@@ -6,13 +6,18 @@ pygame.init()
 
 # Constants
 WIDTH, HEIGHT = 800, 600
-WHITE = (255, 255, 255)
 FPS = 60
 
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("2D Top-Down Character Movement")
 
-player = Player(WIDTH // 2, HEIGHT // 2, player=1)
+background_image = pygame.image.load('assets/background.jpg')
+background_image = pygame.transform.scale(background_image, (WIDTH, HEIGHT))
+
+player1 = Player(WIDTH // 2      , HEIGHT // 2, player=1)
+player2 = Player(WIDTH // 2 + 100, HEIGHT // 2, player=2)
+
+game_objects: list = [player1, player2]
 
 running = True
 while running:
@@ -21,16 +26,13 @@ while running:
             pygame.quit()
             sys.exit()
 
+    screen.blit(background_image, (0, 0))
+
     pressed_keys = pygame.key.get_pressed()
 
-    player.move(pressed_keys)
+    for obj in game_objects:
+        obj.update(pressed_keys)
+        obj.draw(screen)
 
-    screen.fill(WHITE)
-
-    player.draw(screen)
-
-    # Update the display
     pygame.display.flip()
-
-    # Frame rate
     pygame.time.Clock().tick(FPS)
